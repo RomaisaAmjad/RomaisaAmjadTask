@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Web Nexus</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center hover:cursor">
+                <a class="mr-5 hover:text-gray-900 cursor-pointer">Home</a>
+                <a class="mr-5 hover:text-gray-900 cursor-pointer">About</a>
+                <a class="mr-5 hover:text-gray-900  cursor-pointer">Contact</a>
+               
+            </nav>
+            <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Submit
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Web-Nexus
+                    <br class="hidden lg:inline-block">Front-End WebDevelopment Bootcamp
+                </h1>
+                <p class="mb-8 leading-relaxed">Front-end web development bootcamp organized by MLSA FAST Peshawar is an
+                    intensive, fast-paced program designed to equip individuals with the practical skills needed to
+                    build websites and web applications. This bootcamp typically focus on hands-on learning, covering
+                    core technologies like HTML, CSS, JavaScript, and frameworks such as React JS with along with the
+                    highly experienced tea of MLSA.</p>
+                <div class="flex justify-center">
+                    <button
+                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg hover:shadow-lg shadow-grey-700">Register
+                        Now</button>
+                    <button
+                        class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 hover:shadow-lg shadow-blue-700 rounded text-lg">MLSA
+                        FAST Peshawar</button>
+                </div>
+            </div>
+            <div class="lg:max-w- 48:w-full md:w-[18rem] w-5/6 ">
+                <img class="object-cover object-center rounded-full " alt="hero"
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUSEBAVFRAVEBUZGBUVGBgQEBATFRcWFiAWGRkeIDQkHiAxIBkYJDIhMSotMDAvIyI1OD8tNygtLywBCgoKDg0OGhAQGS0lHh8tKystLS0tKy8rLS0tMDMtLS0rLS0tLS03LystLS0tLSs1LS0vLS0tLS0tLS0tLi0rK//AABEIAMgAyAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcBAgj/xABFEAACAgEBBAYGBQoFAwUAAAABAgADEQQFEiExBhMiQVFxBzJhgZGxFDRCobIjJDNSYnJ0g8HCY4Ki0vAVU/EWF0OStP/EABoBAQADAQEBAAAAAAAAAAAAAAABBAUCAwb/xAA0EQACAQMCAwUFCAMBAAAAAAAAAQIDBBESIQUxQRMyUXGBIjNhkbEUJDRCUqHR8CNichX/2gAMAwEAAhEDEQA/AO4xEQBERAEREAREQBPJ8u4UZJAHiTgSM1PSTRV+vqqs+AYMfgJ1GEpckcSnGPN4JWJWLenuzl5XFvJH/qBNR/SRoRyW0+Sj+rT1VrWf5H8jyd1RX50XOeSlf+5mj/7V/wD9U/3z7T0k6I81tHmo/o0n7JW/QyPtlD9aLlPZVqun2zm53Ff3kf8AoDJLTdJtDZ6uqq8iwQ/AziVCpHnF/I7jcUpcpL5kvE+K7VYZUgjxByJ9zyweqeRERBIiIgCIiAIiIAiIgHkRI/a+2KNIm/e4Udw5sxHco75MYuTwlucykorLexITS2ltbT6Zd6+1UHdk8T5DmfdOa7e9Il9uV0w6pP1jhrSPkv8AzjKZfc9jFnZmY82YlmPvM1KHC5y3qPBl1+KQjtTWfodM2p6S6VyNPUzn9Z/yaeeOZ+6VbaHTrX3cBaK18Kxu/wCo5P3ysMwHPhNWzX1jvz5TRjaW1Hml6mdK6ua3Jv0JHU6u205ssdz4uxc/fMMi32ofsqPfxmBtfYftY8hO3d0o7IKyrS3ZNxIBtQ55sfjPgufEzzd8uiPRcNl1kWKJXMz0OfEx9v8A9Sf/ADX+r9ixRK+t7jkx+Myrr7B9rPmJ0r6HVHD4dNcmiwabVWVnNdjIfFWKH7pP7P6ca+n/AOXrF8LBvf6vW++UdNqHvUHy4TZr2hWeZI8505W9XvJepx2VzS3jn0OsbL9JlTYGopZD+snbXzweI++XHZm2NPqRmi5X9gOGHmp4icAVweRBHsmSq1kYMrFWB4FTusPfK1XhdKW8Hg96XE6sNprP1P0VE5NsH0hainC6gddX4+raB5/a9/xnR9jbb0+rTeocN4rydPMTIr2lSj3lt4mvQvKVbuvfwJOIiVi0IiIAiIgCck9K/wBdT+GX8dk63OSelf66n8Mn47Jf4b79epn8T9x6opVjhRkngJG37TPJBj2nnNvaP6Jvd8xISa13WnBqMWZtjbwnFyks7n3ZYW5knznxETObb3ZqJJbIz6fR22Bmrqd1QZYqpYIOJyxHLkfhPNLpLLW3aq3sbGd1FLtgd+BLz6NNpLpdNrrXANYbRq4PHNT2ujf6WMn+h+yP+l6vdbi+p1bVVE8zpa0NpsB9p6se6eMqmMnoo8jk9ulsRVd62VHzusykK+6cHdPfgzDOi6Po/VqKNEbntNQq19tiBy2VotA3a1PBc5Gcc5HbD0+zdW+oc6N6qqNDbYUW5nZ2RkwQxHDgSMcpPaDQUuJeL9Js2irT3WaOxxrGdgguYDTVqwTCnHbbv4yQHRHSVtqqET6Vqq7yFpa76PYKDWrh0AHbYZwfLlHaIaDm83tJsjUW1WXV0s1NYy7gdhMcecttGx9BQ2i01+nstu1lVLtathr6nr2KqEQDDY78yc3dLptLRp30xsCbXerPWlA1qEL1pGO/9T75Dq+AUPE5REsnpCsqO0bxVV1e7awftb/WOGPbAx2fKVueieVk5awz6SwrxBIPsm9RtIj1xkeI5yPie0Ks4cmeNShCp3kWGuwMMg8DLj6L/r/8l/mso+zf0Y8z8zLx6L/r/wDJf5rNC4lqtpN9UZFCOm6UV0Z2CIifLn1IiIgCIiAJyT0r/XU/hk/HZOtzknpX+up/DJ+OyX+G+/XqZ3FPceqKHtH9E3u+YkJJvaP6Jvd8xISaN9315FTh3u35iIiUi+bml2nbXTdQhHV39XvjGSeqbeXB7uM3l6U6sW0XdZmzTVhKiQCFUArxHecHnIWJGlE5ZNUdJtZV1G5Zu/R+tNZCjlc284P6wJ8Z939KtQxfdWmsWUPUwrqStSjkM3ADmcDjHSP6voP4I/8A6L5Mr0PqCKj7wtbTiw3G6laUdq+sWvqj2yOS72eZ5YnHs82jrchtldK9Vp6lqXq3RGLVi2tLTSx4lkLDsz60fS/V1bzKazazu3XNWj6hGcYYq5GRN3ZnRuu2glqra7DprLVsa2pVcojOAtBG+ykL6wPt5TGmxtIDo6ybjdqhSSQyqlQe5qzgbuTkA48Pbyj2fAbmvoemOsprStTW3Vgip3rSy6gH9RyMiaD7c1BqWov2UvNwOO31rc23u+Set2XpDTqTR1ws0rqC1jKy3oz9XndCjdOcd5lbkpRfQh5JHbm2bdZZ1twTrMYJRFr3/wBpscz7ZHRE7SwciIiATWzf0Y8z8zLx6L/r/wDJf5rKPs39GPM/My8ei/6//Jf5rNSt+EfkYtP8Wv8Ao7BERPmD6cREQBETwmAJyX0r/XU/hk/HZOrNZOR+lWzOtT+GX8dkv8N9+vIz+J70PVFI2ifyTe75iQuZK7Qs/Jt7vmJCl5oXsvbXkVOHr/G/MyZjMwmyedZKOS/gzZjemDrI3zGRgsI6Qg011W6Sizqqyiu/XBwpZn+zYBzY90+b+kAsrAt01L3LUKxcesFm4q7q5AcKzAcASO4c5AZPgZ7x8DOcI6LMnS1wAfo9Ju+jGg2kOXarq+qHDf3Qd3HEDu886P8A1yzrNNZurvaZa1QYOGFdjWDe4+Ld2JD8fAxx8DGECVXa7hdQuFxqN3f55XdsFnZ4+I78zQ3phyfAzzfPhOskYM+Z7ma/WT0WRkjBnzPczALJ9B5ORgntmn8mPM/OXj0Xn8//AJL/ADWUHZtn5MeZ+cvHowsxr/5L/wBs1Kr+6vyMWmvva8zs8TClmZlBnzJ9MexEQAZisaZDNbUtwgEftHXpUpZ3CqOZYhVHvM436Qts1X6pWqsDqKVXK8RkM55++XD0o2Z0Lj9tPxCcbly0zF60VbmKmtDM2ou3lI8f6cZqCgd5Myzc02ytRYpaui11AJLKjMoA5nIEsznqeZHlTpqCxE0BUPCehB4Cb6bKvLlBWd4Um3Bwp6oJ1m9x59njJCropeyoVeo2PSLUp3x17oQW4L3nAPDOeE4yjvcgsRJjUbEWuiq1rxvWorqgRzhS7V5L+qOKtwkhtPoe2ntvRrQyVad7FsVezaa3Stk59kgk58h4yNSGGVeJPbY2bpKtNVbVZczXByodURRuPuHewxn1sno8L9JZcXIu7fUoBwuFCq9vwVuHtBjUsZGGV+JZj0X39FprqGZr7bN16zjCh7bKkZfZmsg+Ykieh+n+k211vbbWmjruUpuB7TYyLwzwx2iZGuJOllIiWrTdFEbXXadrylNLBTay4O+7LWikfvN8AxmlodgKabrr7HrFNwrZUr650Yhu0/aG6mRjPHjJ1ojDILE+Sg8BJnX7FWnT12veOstrFiVhWIKFt31/VyMcRPnaGwL6FoZwv5wMoAcspO6d1/A4dDjwIjKYwyHNS+E+TQPEya2r0e1OmBaxFKK+4WrdLlRx9ltwndPA8Diamp2bfWi2WUWJW3quyMiNnjwJGDJ2Y3MWmt3Bj/nHjLV0D2xVTqw9rhF6thluAycSoRPV1JODh0PHsIKevqfpXZu0UtUNW6up+0pDL8RJep5y/wBFVmNHj/Gf+2dK0rcJlSjhtGjF5WTbEQInJIM09Xym4Zp6vlAOb+k0/mb/AL6fiE5FOvek4fmb/vp+ITkMuUO6V6veLL0I1LrZaldV7PZWALNMN7VUBXXLKPA8AeXnNjU2GmraGks1XWbhrNZLYV2S7BCDPPFjEgeB8JUwSORnk9XHfJxq2Llpdp6XNOpa8B69A1D0brm2xxVZSu6cbm6VZeJPDHKYtJt7S1/RdQetbVabT7grCqtLOr2MrNZvZxhl4Be7nKlEjQhqLFf0gR9DXpm+kBq0cYW0JpnLWtYGevdO9je9nKZbemLs2r/JA16rfO6Tk0O4wWU47+8d+B4SsRJ0IZZu6raDWUU0lQBT1mD3nrGDHPwkjouluroFK0vuV0j9GpYVXdtnJtXPaznB9kgMiN8eIhpMjLJ3S9KdRUAKwigaeyoAA8Essa3PE+sGbsnuwIp6SuN4WU1WI2lqoKN1igpSUKnKuDnKjvkFvjxEb48RGmIyyx29MtUd8oVrey1XZkGCQiLWlfHPZUDh38Zlo6Vot1uo+jfl7d/JFjLSesQKwevHbGctjI4n2Sr7w8Z7GmJOWWbR7e0q0Jp3otevrandWsV0U153uqG6Nzf7+PLxm3/6sp1BQ6mla2XaFV+9UGIZPVsBDOcHC14xw4SnRI0IamXKra+jpaw9Y141Orpe0dWURKku61h2vWY8vDGfGZdXaV+mvbq67xqhu1Ilgtax2tR1sKfY3VB548BKREaBqOhdPL6vo7hCbVGrFCllVRpDpkClUYZLB8g93I8Jz2fW+cbuTu5zjPDI758yYxwiJPJ1b0XH81/nN/bOm6M8JzP0Wj81/nN/bOmaMcJRqd5lqHdRvLELE4OgZrahZtGY3WAc49KVWNC5/bT8QnHDS2ASpweRxwOJ+m9Vo1cYZQRnOCM8RKH6UNk5ortA9Ryp/dcD+qj4y3ayTkoPqVbnMYOa6HH2rIBOOQ+U1jce4SfNGRiQdlO6SDzBl+4odnhopWtx2uUzGbGnmW8Zl3Y3ZWwW8mHdPiY6uZ92MRgZMHVz3qpnxJeno/ZZpzfU62BfWRc9anmMSVHJzKoo82QPVx1csd+ztGNCti3Z1RYZryO8kEbvMcO+YdodH7NPStlzorP6tRz1vvGOEnQcKvF7fHBA9XHVzYxPMTnB65MG6fEz3LeMzbs83YwMmMWNPRce8T73YWrJAHMn5yUn0DaXMypWSAQOc+hSxzhSQBk4GcSUXT4AHgPlOi+i3ZXYtuI4FlQf5e0fmPhLVxRVKnrZSt7h1amjofXooqzos/4z/wBs6RplmtpdGqeqoGTk4GMk98361mLKWW2bCWFgyCIETkk9nhE9iAfBWaG2tmLqdPZS3J0IB8GHEH3HEkYkxk000cyipJpn501Gnat2Rxh1YqR4EZBkVtTT/bHkZ1X0n9HsN9MqHA4FoHceQf5A+6c8ZQRg8jPp4SjdUc/1M+YkpWtb+7orkTY1mmKH9k8jNeZkouLwzahNTipLkIiJydCb2x9q26W0WVnzU+q6+BmjNnZ2hs1FgrqXLn4AeJ9klfA5mo6Xq5FwOs2bX+fIubm9WjhhLeZbHd5/DjKhtHX2aiw2Wtlj8APAeyWx+juiZTpK7h9NUb28fVdu+v8A5xHxlO1WmepylilXU4IPdOpZKlt2eXhvPx8PgYoiJwXRERAEkNl6fJ3zyHKa2k05sOO7vMm0UAADkJetKGp63yRn3txpjoXNn3XUWYKoyxIAA5kngBO79HdkjS6aunvVe0fFzxJ+Mofoy6PGx/pdg7CEisH7T97eQ+flOoynxO4UpKnHpz8z34XbuMXUl15eR8hZ9AT2JlGsIiIAiIgCIiAYr6VsUo4BVgQQeIIPAicX6Y9Gn0NvDJ07nsN4fsN7R987ZNXaOhr1FTVWqGRhxH9R4GWrS6dCeej5lS7tVXj8VyPzzbWGGG5SF1WlNZ8R3GXzpX0Xt0L54tQx7Nn9reB+fyr7oCMEZBn0E4U7mClF+pg06tS2npkvQrkTd1egK8V4r4d4mlMypTlB4kbFOrGosxYk5oekH0fTtXRVuWv61xbecj9kY4SDicJ4JnCM1hn2lrBgwJDA5BB4gjvzJja+3RqqlFtI+kKMdcG3d4D9Zcf1kJEZDpxbTa3QiIkHYmfS6Y2Hhy7z4TLpNCW4twX7zJZECjAGBLtC1c95cihc3ih7MN2eU1BBgf8AmWDon0dfXW44ilSC7+A/VHtM86L9GrddZhezSD27COA9g8WnZdl7Oq01S1UruovxJ8Se8yb29jRj2cOf0PGzs5VpdpPl9TNpdMlSKlahUVQAByAHCZ4nk+ebyfQpYWEexEQSIiIAiIgCIiAIiIBh1WnS1ClihkYYKkZBBnLelnQSyjNulBenmU52V/7h9/nznWJ4ZYt7mdB5jy8CtcWsK6xLn4n5ympqtCr8Rwb7jO19J+g9GqzZViq/nkDsOf2h/UffOX7Y2LqNI+7fWV8G5o3k03qNzRuY4fPwMGrb1rWWVy8SoX6dkPaHv7jMUsbAHgRkTRv2aDxU49ndPOrZNbw3LNHiEXtPYiomwdFZnG77+6blGzQOLnPsHKV4W9STxgszuqcFnOSPpoZz2R7+4SU0ugVeLcW+4TbVQBgDAm/snZF+qfcorLHvPJV/ebul6FvTpLVNmbUuqlZ6YL+TRly6J9BrdTi3UA10cwOVlo9ngPbLX0Y6CU6bFl+Lbhx5fkkPsHefafgJcJQuuJ59ml8/4Ltrwz81X5fya+i0ldKCutQqKMAAYAmzETGbb5myklshERBIiIgCIiAIiIAiIgCIiAIiIAmDVaVLVKWIGU8ww3gZmnsJ45ENJ7M55t/0bq2W0b7p/wC25yn+VuY9+ZQNp7Kv0zbt9TIe7I7LY8G5H3T9AzFqdOlilbEV1PNWAZT7jNKhxOpT2luv3M2vwynPeOz/AGPzvNvZ2zbtQ25RWzt7BwGfE8h751tugezzZv8AVNj9TePV58cc/dnEsOl0tdShK0VFHIKAo+AlupxaOPYjv8SrT4TLPty2+BQNgejcDD6x8/4aHA/zNz+Hxl90WjrpQJUiog5BRgTYiZFa4qVXmbNajbU6SxFHsRE8T3EREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQD//Z">
+            </div>
+        </div>
+    </section>
+    <!-- Steps -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="flex flex-wrap w-full">
+                <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+                    <div class="flex relative pb-12">
+                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Episode 1:
+                                Introduction to Web-Development and Git and GitHub</h2>
+                            <p class="leading-relaxed">This Episode includes basic idea of web Deveopment; a short
+                                overview followed by Git and GitHub and it's set up and usage.</p>
+                        </div>
+                    </div>
+                    <div class="flex relative pb-12">
+                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Episode 2: HTML
+                            </h2>
+                            <p class="leading-relaxed">This episode is the level 1 for web Development.It includes basic
+                                Idea of HTML and use of basic tags.</p>
+                        </div>
+                    </div>
+                    <div class="flex relative pb-12">
+                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <circle cx="12" cy="5" r="3"></circle>
+                                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Episode 3: CSS
+                            </h2>
+                            <p class="leading-relaxed">This episodes includes the styling of a web page using CSS it's
+                                different properties and it's implementation on web page.</p>
+                        </div>
+                    </div>
+                    <div class="flex relative pb-12">
+                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Episode 4:
+                                Bootstrap and Tailwind CSS</h2>
+                            <p class="leading-relaxed">This episode includes the CSS frameworks which is use to make
+                                websites fastly.The speaker also shares more websites e.g. tailblocks , universe.io
+                                which can be use in making websites.</p>
+                        </div>
+                    </div>
+                    <div class="flex relative">
+                        <div
+                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                                <path d="M22 4L12 14.01l-3-3"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">FINISH</h2>
+                            <p class="leading-relaxed">More Episodes are not yet held.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="lg:w-3/5 md:w-1/2 w-64 h-[95%]  object-cover object-contain rounded-lg md:mt-0 mt-12"
+                    src="Poster.jpg" alt="step" class="w-full h-full object-contain">
+            </div>
+        </div>
+    </section>
+    <!-- Team -->
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">MLSA FAST PWR TEAM</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">The Microsoft Learn Student Ambassadors (MLSA)
+                    program at FAST Peshawar is a vibrant community of tech enthusiasts dedicated to empowering students
+                    with knowledge and skills in Microsoft technologies. </p>
+            </div>
+            <div class="flex flex-wrap -m-8">
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="azharJadoon.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Azhar Jadoon</h2>
+                            <h3 class="text-gray-500 mb-3">President</h3>
+                            <p class="mb-4">Azhar Jadoon, serving as the President, is a passionate leader and advocate
+                                for innovation and community growth.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="rohailIqbal.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Rohail Iqbal</h2>
+                            <h3 class="text-gray-500 mb-3">Vice President</h3>
+                            <p class="mb-4">Rohail Iqbal, serving as the Vice President, is a dedicated leader and a
+                                passionate advocate for fostering innovation and collaboration within the community.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="anasKhan.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Anas Khan</h2>
+                            <h3 class="text-gray-500 mb-3">General Secetary</h3>
+                            <p class="mb-4">Anas Khan, serving as the General Secretary, is a dedicated organizer and a
+                                strong advocate for collaboration and growth.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="muhummadKaif.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Muhammad Kaif</h2>
+                            <h3 class="text-gray-500 mb-3">Graphics Co-Lead</h3>
+                            <p class="mb-4">Muhammad Kaif, serving as the Graphic Co-Lead, is a creative visionary with
+                                a keen eye for design and innovation. </p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-8">
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="saudNasir.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Saud Nasir</h2>
+                            <h3 class="text-gray-500 mb-3">Graphics Lead</h3>
+                            <p class="mb-4">Saud Nasir, serving as the Graphics Lead, is a talented designer with a
+                                passion for creativity and visual storytelling.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="asimShakeel.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Asim Shakeel</h2>
+                            <h3 class="text-gray-500 mb-3">Photography and Videography co-lead</h3>
+                            <p class="mb-4">Asim Shakeel, serving as the Videographer and Photographer, is a skilled
+                                visual storyteller with a knack for capturing moments that inspire.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="subhanTariq.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Subhan Tariq</h2>
+                            <h3 class="text-gray-500 mb-3">Photography and Videography Lead</h3>
+                            <p class="mb-4">Subhan Tariq, serving as the Videography and Photography Lead, is a talented
+                                visual expert with a passion for creating captivating content.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="ibrahimKhalil.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Ibrahim Khalil</h2>
+                            <h3 class="text-gray-500 mb-3">Event Managment co-lead</h3>
+                            <p class="mb-4">
+                                Ibrahim Khalil, working in Event Management, is a highly organized and detail-oriented
+                                individual with a passion for executing flawless events.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="ahmadIrtaza.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Ahmad Irtaza</h2>
+                            <h3 class="text-gray-500 mb-3">Event Managment Lead</h3>
+                            <p class="mb-4">
+
+                                Ahmad Irtaza, serving as the Event Management Lead, is a highly skilled organizer with a
+                                talent for coordinating and executing successful events.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="abdullahKhan.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Abdullah Khan</h2>
+                            <h3 class="text-gray-500 mb-3">Outreach and Sponsors co-lead</h3>
+                            <p class="mb-4">
+                                Abdullah Khan, handling Outreach and Sponsorships, is a dynamic communicator with a
+                                strong ability to build and maintain relationships.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="shaheerAkhtar.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Shaheer Akhtar</h2>
+                            <h3 class="text-gray-500 mb-3">Outreach and sponsers lead</h3>
+                            <p class="mb-4">
+                                Shaheer Akhtar, as the Outreach and Sponsorships Lead, is a strategic and results-driven
+                                individual skilled in building strong relationships</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="hudaAmir.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Huda Amir</h2>
+                            <h3 class="text-gray-500 mb-3">Social Media and Marketing co-lead</h3>
+                            <p class="mb-4">
+                                Huda Amir, serving as the Social Media and Marketing Co-Lead, is a creative and
+                                results-oriented individual with a passion for digital marketing.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-4 lg:w-1/4 md:w-1/2 ml-[12%]">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="munazzahFatima.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Munazzah Fatima</h2>
+                            <h3 class="text-gray-500 mb-3">Social Media and Marketing Lead</h3>
+                            <p class="mb-4">
+                                Munazzah Fatima, serving as the Social Media and Marketing Lead, is a dynamic and
+                                creative professional with a strong passion for digital marketing.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="abdulAziz.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Abdul Aziz</h2>
+                            <h3 class="text-gray-500 mb-3">Technical and Development co-lead</h3>
+                            <p class="mb-4">
+                                Abdul Aziz, serving as the Technical and Development Co-Lead, is a skilled and
+                                innovative individual with a strong background in technology and development.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                    <div class="h-full flex flex-col items-center text-center">
+                        <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                            src="subhanShah.jpg">
+                        <div class="w-full">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Subhan Shah</h2>
+                            <h3 class="text-gray-500 mb-3">Technical and Development</h3>
+                            <p class="mb-4">
+
+                                Subhan Shah, serving as the Technical and Development Lead, is a highly skilled and
+                                innovative professional with a deep passion for technology and development.</p>
+                            <span class="inline-flex">
+                                <a class="text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="ml-2 text-gray-500">
+                                    <svg fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Web Nexus</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
+                2024 Web Nexus —
+                <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer"
+                    target="_blank">@mlsafastpwr</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
